@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "meshtronics-cd0cd"
+  },
+  "targets": {
+    "meshtronics-cd0cd": {
+      "hosting": {
+        "meshtronic": [
+          "meshtronic"
+        ]
+      }
+    }
+  }
+}
