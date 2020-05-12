@@ -62,7 +62,9 @@ const About = () => {
             <Grid item xs={12} md={2}>
               <div>
                 <Box component='div' className={classes.founderImg}>
-                  <img src={founderImg}></img>
+                  <center>
+                    <img src={founderImg}></img>
+                  </center>
                 </Box>
               </div>
             </Grid>
