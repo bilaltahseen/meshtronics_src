@@ -31,6 +31,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const About = () => {
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
   const classes = useStyles();
   return (
     <React.Fragment>
