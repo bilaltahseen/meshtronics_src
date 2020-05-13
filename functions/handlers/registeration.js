@@ -9,6 +9,7 @@ exports.registeration = (req, res) => {
     'number',
     'Scourse',
     'detail',
+    'payment',
     'checked',
   ];
   let conditions = [];
