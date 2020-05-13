@@ -50,6 +50,9 @@ const Registrations = () => {
                 <TableCell style={{ fontWeight: 'bold' }} align='right'>
                   Details
                 </TableCell>
+                <TableCell style={{ fontWeight: 'bold' }} align='right'>
+                  Payment Option
+                </TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -63,6 +66,7 @@ const Registrations = () => {
                       <TableCell align='right'>{row.data.number}</TableCell>
                       <TableCell align='right'>{row.data.Scourse}</TableCell>
                       <TableCell align='right'>{row.data.detail}</TableCell>
+                      <TableCell align='right'>{row.data.payment}</TableCell>
                     </TableRow>
                   ))
                 : ''}
