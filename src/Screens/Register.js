@@ -49,11 +49,13 @@ const Register = () => {
   const [details, setDetails] = React.useState('');
   const [completed, setCompleted] = React.useState(false);
   const [uploaded, setUpload] = React.useState(false);
+  const [paymentOption, setPaymentOption] = React.useState('Cash');
   const classes = useStyles();
   const phoneRef = React.useRef();
   const _checkFilled = () => {
     setCompleted(!completed);
   };
+  const _paymentOptionCheck = (event) => {};
   const [state] = React.useContext(Store);
   const _submitHandler = (event) => {
     event.preventDefault();
@@ -69,6 +71,7 @@ const Register = () => {
             number: phone,
             Scourse: course,
             detail: details,
+            payment: paymentOption,
             checked: completed,
           },
         },
@@ -80,6 +83,7 @@ const Register = () => {
         setCourse('');
         setDetails('');
         setCompleted('');
+        setPaymentOption('Cash');
         setUpload(true);
       });
     } else {
@@ -211,6 +215,40 @@ const Register = () => {
                   onChange={(event) => setDetails(event.currentTarget.value)}
                 />
               </Grid>
+
+              <Grid item xs={12}>
+                <FormLabel>Payment Option</FormLabel>
+              </Grid>
+              <Grid item xs={6}>
+                <FormControlLabel
+                  onChange={() => {
+                    setPaymentOption('Cash');
+                  }}
+                  checked={paymentOption === 'Cash' ? true : false}
+                  control={
+                    <Checkbox
+                      value='allowExtraEmails'
+                      style={{ color: 'green' }}
+                    />
+                  }
+                  label='Cash'
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <FormControlLabel
+                  onChange={() => {
+                    setPaymentOption('Credit/Debit Card');
+                  }}
+                  checked={paymentOption === 'Credit/Debit Card' ? true : false}
+                  control={
+                    <Checkbox
+                      value='allowExtraEmails'
+                      style={{ color: 'green' }}
+                    />
+                  }
+                  label='Credit/Debit Card'
+                />
+              </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
                   onChange={_checkFilled}
@@ -220,7 +258,7 @@ const Register = () => {
                       style={{ color: 'green' }}
                     />
                   }
-                  label='I have agreed the terms and services'
+                  label='I confirm that the information given in this form is true, complete and accurate *'
                 />
               </Grid>
             </Grid>
