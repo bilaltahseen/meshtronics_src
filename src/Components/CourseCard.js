@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: '95%',
     paddingBottom: 20,
+    height: '100%',
   },
   imageDiv: {
     width: '100%',

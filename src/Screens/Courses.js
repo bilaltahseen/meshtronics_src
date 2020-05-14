@@ -32,7 +32,7 @@ const Courses = (props) => {
     <React.Fragment>
       <Container maxWidth='xl'>
         <center>
-          <Grid className={classes.root} container spacing={3}>
+          <Grid className={classes.root} container spacing={5}>
             {Card}
           </Grid>
         </center>
