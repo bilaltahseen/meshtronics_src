@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import aboutUsImg from '../assets/images/aboutUs.svg';
 import founderImg from '../assets/images/founderImg-01.svg';
+import ContentStratgist from '../assets/images/ContentStartigist-01.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: { flex: 1, marginTop: '100px' },
@@ -44,7 +45,7 @@ const About = () => {
         <Box>
           <h1 className={classes.heading}>About Us</h1>
           <Grid container justify='flex-start'>
-            <Grid item xs={12} md={8}>
+            <Grid item xs={12} md={6}>
               <p className={classes.content}>
                 Meshtronics is a group of electronics enthusiasts and industry
                 specialists who are determined to share their expertise with
@@ -64,12 +65,21 @@ const About = () => {
                 </strong>
               </p>
             </Grid>
-            <Grid item xs={12} md={1}></Grid>
             <Grid item xs={12} md={2}>
               <div>
                 <Box component='div' className={classes.founderImg}>
                   <center>
                     <img src={founderImg}></img>
+                  </center>
+                </Box>
+              </div>
+            </Grid>
+            <Grid item xs={12} md={1}></Grid>
+            <Grid item xs={12} md={2}>
+              <div>
+                <Box component='div' className={classes.founderImg}>
+                  <center>
+                    <img src={ContentStratgist}></img>
                   </center>
                 </Box>
               </div>
