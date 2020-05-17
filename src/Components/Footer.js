@@ -1,5 +1,11 @@
 import React from 'react';
-import { Box, makeStyles, Grid, useMediaQuery } from '@material-ui/core';
+import {
+  Box,
+  makeStyles,
+  Grid,
+  useMediaQuery,
+  IconButton,
+} from '@material-ui/core';
 
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedIn from '@material-ui/icons/LinkedIn';
@@ -20,6 +26,15 @@ const useStyles = makeStyles((theme) => ({
       fontSize: '2.1em',
     },
   },
+  IconButton: {
+    fontSize: '1rem',
+    '& svg': {
+      '&:hover': {
+        color: theme.palette.secondary.main,
+        transition: '0.2s ease',
+      },
+    },
+  },
   contact: {
     '& svg': { color: '#fff' },
     '& p': { color: '#fff', paddingLeft: 20 },
@@ -32,7 +47,7 @@ const Footer = () => {
     <React.Fragment>
       <footer id='course_footer'>
         <Box className={classes.root}>
-          <Grid container justify='center'>
+          <Grid container justify='center' alignItems='center'>
             <Grid item sm={4} md={4} xs={12}>
               <Grid
                 container
@@ -41,14 +56,39 @@ const Footer = () => {
                 justify={matches ? 'flex-start' : 'center'}
               >
                 <CallIcon />
-                <p>+92 0331-1385989</p>
+                <p>+92 335-2655016</p>
               </Grid>
             </Grid>
             <Grid item sm={4} md={4} xs={12} className={classes.social}>
               <Grid container justify='center' alignItems='center'>
-                <FacebookIcon />
-                <LinkedIn />
-                <TwitterIcon />
+                <IconButton
+                  onClick={() =>
+                    window.open(
+                      'https://www.facebook.com/Meshtronics-279027186268585/'
+                    )
+                  }
+                  className={classes.IconButton}
+                >
+                  <FacebookIcon />
+                </IconButton>
+                <IconButton
+                  onClick={() =>
+                    window.open(
+                      'https://www.linkedin.com/in/muhammad-sami-5369a316b'
+                    )
+                  }
+                  className={classes.IconButton}
+                >
+                  <LinkedIn />
+                </IconButton>
+                <IconButton
+                  onClick={() =>
+                    window.open('https://twitter.com/Muhamma03133492?s=09')
+                  }
+                  className={classes.IconButton}
+                >
+                  <TwitterIcon />
+                </IconButton>
               </Grid>
             </Grid>
             <Grid item sm={4} md={4} xs={12}>
@@ -59,7 +99,7 @@ const Footer = () => {
                 className={classes.contact}
               >
                 <EmailIcon />
-                <p>meshtronics@gmail.com</p>
+                <p>engr.muhammadsamisaleem@gmail.com</p>
               </Grid>
             </Grid>
           </Grid>
