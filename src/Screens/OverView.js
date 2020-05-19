@@ -9,14 +9,16 @@ import { useMediaQuery } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {},
   overviewtext: {
-    fontSize: '1.2em',
     [theme.breakpoints.down('xs')]: {
-      fontSize: '1em',
-      lineHeight: '1.4em',
+      fontSize: '1.1em',
+      lineHeight: '2em',
+      fontWeight: 300,
+      fontFamily: 'Montserrat',
     },
     lineHeight: '2em',
+    fontSize: '1.2em',
     fontFamily: 'Montserrat',
-    fontWeight: 'light',
+    fontWeight: 300,
   },
 }));
 

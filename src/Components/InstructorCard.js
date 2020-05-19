@@ -5,7 +5,6 @@ const useStyles = makeStyles((theme) => ({
   userDetails: {
     textAlign: 'center',
     paddingBottom: 10,
-    lineHeight: '5px',
     '& :first-child': {
       color: theme.palette.primary.main,
       fontWeight: 'bold',
@@ -21,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
   userDescp: {
     paddingTop: 1,
     padding: 20,
+    wordWrap: 'break-word',
   },
   largePic: {
     width: '200px',
@@ -95,7 +95,6 @@ const InstructorCard = (props) => {
             item
             xs={8}
             style={{
-              lineHeight: '5px',
               marginTop: 'auto',
               marginBottom: 'auto',
             }}
@@ -131,9 +130,11 @@ const InstructorCard = (props) => {
               fontSize: '1.2em',
             }}
           >
-            <p style={{ textAlign: 'left' }}>
-              {props.instructorContent.instructorDetails}
-            </p>
+            <div style={{ wordWrap: 'break-word' }}>
+              <p style={{ textAlign: 'left' }}>
+                {props.instructorContent.instructorDetails}
+              </p>
+            </div>
           </Grid>
         </Grid>
       </Paper>
